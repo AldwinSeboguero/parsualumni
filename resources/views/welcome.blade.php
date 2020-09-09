@@ -13,8 +13,8 @@
          
     </head>
     <body>
-       <div id="app">
+       <v-app id="app">
            <example-component/>
-       </div> 
+       </v-app> 
     </body>
 </html>
