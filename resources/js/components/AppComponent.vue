@@ -1,7 +1,7 @@
 <template>
-     <v-container>
-         <v-alert type="info">I'm Vuetify Component Alert</v-alert>
-     </v-container>
+    <div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>

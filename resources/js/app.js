@@ -12,7 +12,7 @@ import '@mdi/font/css/materialdesignicons.css';
 import vuetify from './vuetify';
 import router from './router';
 
-import Example from './components/ExampleComponent';
+import App from './components/AppComponent';
 import Login from './components/LoginComponent';
 
 new Vue({
@@ -20,6 +20,6 @@ new Vue({
     router,
     vuetify,
     components:{
-        'example-component' : Login
+        'app' : App
     }
 });
