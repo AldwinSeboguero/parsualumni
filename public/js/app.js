@@ -2329,6 +2329,106 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2399,9 +2499,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    var _ref;
+
+    return _ref = {
+      step: 1,
+      showPassword: false,
+      showPasswordc: false,
+      e1: 'Select Batch',
+      batch: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+    }, _defineProperty(_ref, "e1", 'Select Batch Type'), _defineProperty(_ref, "batchtype", ['High School', 'College', 'High School and College']), _ref;
+  },
   props: {
     source: String
-  }
+  },
+  name: 'App'
 });
 
 /***/ }),
@@ -21311,100 +21423,517 @@ var render = function() {
                 [
                   _c(
                     "v-col",
-                    { attrs: { cols: "12", sm: "8", md: "4" } },
+                    { attrs: { cols: "12", sm: "8", md: "8" } },
                     [
                       _c(
                         "v-card",
                         { staticClass: "elevation-12" },
                         [
                           _c(
-                            "v-toolbar",
-                            { attrs: { color: "primary", dark: "", flat: "" } },
+                            "v-window",
+                            {
+                              model: {
+                                value: _vm.step,
+                                callback: function($$v) {
+                                  _vm.step = $$v
+                                },
+                                expression: "step"
+                              }
+                            },
                             [
-                              _c("v-toolbar-title", [_vm._v("Login form")]),
-                              _vm._v(" "),
-                              _c("v-spacer"),
-                              _vm._v(" "),
                               _c(
-                                "v-tooltip",
-                                {
-                                  attrs: { bottom: "" },
-                                  scopedSlots: _vm._u([
-                                    {
-                                      key: "activator",
-                                      fn: function(ref) {
-                                        var on = ref.on
-                                        return [
+                                "v-window-item",
+                                { attrs: { value: 1 } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    [
+                                      _c(
+                                        "v-col",
+                                        { attrs: { cols: "12", md: "8" } },
+                                        [
                                           _c(
-                                            "v-btn",
-                                            _vm._g(
-                                              {
-                                                attrs: {
-                                                  href: _vm.source,
-                                                  icon: "",
-                                                  large: "",
-                                                  target: "_blank"
-                                                }
-                                              },
-                                              on
-                                            ),
+                                            "v-card-text",
+                                            { staticClass: "mt-12" },
                                             [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-code-tags")
-                                              ])
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "text-center pb-4 mt-4"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-btn",
+                                                    {
+                                                      staticClass: "mx-2",
+                                                      attrs: { fab: "" }
+                                                    },
+                                                    [
+                                                      _c("v-img", {
+                                                        attrs: {
+                                                          src:
+                                                            "http://parsu-oscs.herokuapp.com/img/profile/picture.jpg",
+                                                          alt: "Vuetify",
+                                                          width: "100px"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "text-center display-2 teal--text text--accent-3"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Sign in to ParSU Alumni"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h4",
+                                                {
+                                                  staticClass:
+                                                    "text-center mt-4"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Ensure your email for sign in"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-form",
+                                                [
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      label: "Email",
+                                                      name: "Email",
+                                                      "prepend-icon":
+                                                        "mdi-email",
+                                                      type: "text",
+                                                      color: "teal accent-3"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      type: _vm.showPassword
+                                                        ? "text"
+                                                        : "password",
+                                                      label: "Password",
+                                                      "prepend-icon":
+                                                        "mdi-account-lock-outline",
+                                                      "append-icon": _vm.showPassword
+                                                        ? "mdi-eye"
+                                                        : "mdi-eye-off"
+                                                    },
+                                                    on: {
+                                                      "click:append": function(
+                                                        $event
+                                                      ) {
+                                                        _vm.showPassword = !_vm.showPassword
+                                                      }
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h3",
+                                                {
+                                                  staticClass:
+                                                    "text-center mt-3"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Forgot your password?"
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "text-center mt-3 pb-3"
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    rounded: "",
+                                                    color: "blue accent-3",
+                                                    dark: ""
+                                                  }
+                                                },
+                                                [_vm._v("SIGN IN")]
+                                              )
                                             ],
                                             1
                                           )
-                                        ]
-                                      }
-                                    }
-                                  ])
-                                },
-                                [_vm._v(" "), _c("span", [_vm._v("Source")])]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-card-text",
-                            [
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "teal accent-3",
+                                          attrs: { cols: "12", md: "4" }
+                                        },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            {
+                                              staticClass: "white--text mt-12"
+                                            },
+                                            [
+                                              _c(
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "text-center display-1"
+                                                },
+                                                [_vm._v("Hello, Friends !")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h5",
+                                                { staticClass: "text-center" },
+                                                [
+                                                  _vm._v(
+                                                    "Enter your personal details and start journey with us"
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "text-center" },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    rounded: "",
+                                                    outlined: "",
+                                                    dark: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.step++
+                                                    }
+                                                  }
+                                                },
+                                                [_vm._v("SIGN UP")]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
                               _c(
-                                "v-form",
+                                "v-window-item",
+                                { attrs: { value: 2 } },
                                 [
-                                  _c("v-text-field", {
-                                    attrs: {
-                                      label: "Login",
-                                      name: "login",
-                                      "prepend-icon": "mdi-account",
-                                      type: "text"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("v-text-field", {
-                                    attrs: {
-                                      id: "password",
-                                      label: "Password",
-                                      name: "password",
-                                      "prepend-icon": "mdi-lock",
-                                      type: "password"
-                                    }
-                                  })
+                                  _c(
+                                    "v-row",
+                                    { staticClass: "fill-height" },
+                                    [
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "teal accent-3",
+                                          attrs: { cols: "12", md: "4" }
+                                        },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            {
+                                              staticClass: "white--text mt-12"
+                                            },
+                                            [
+                                              _c(
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "text-center display-1"
+                                                },
+                                                [_vm._v("Welcome Back!")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h5",
+                                                { staticClass: "text-center" },
+                                                [
+                                                  _vm._v(
+                                                    "To Keep connected with us please login with your personal info"
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "text-center" },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    rounded: "",
+                                                    outlined: "",
+                                                    dark: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.step--
+                                                    }
+                                                  }
+                                                },
+                                                [_vm._v("SIGN IN")]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        { attrs: { cols: "12", md: "8" } },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "mt-12" },
+                                            [
+                                              _c(
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "text-center desplay-2 teal--text text--accent3"
+                                                },
+                                                [_vm._v("Create Account")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h4",
+                                                {
+                                                  staticClass:
+                                                    "text-center mt-4"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Ensure your email for registration"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-form",
+                                                [
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      label:
+                                                        "Student ID Number",
+                                                      name: "student_id",
+                                                      "prepend-icon":
+                                                        "mdi-ticket-account",
+                                                      type: "text",
+                                                      color: "teal accent-3"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      label: "Name",
+                                                      name: "Name",
+                                                      "prepend-icon":
+                                                        "mdi-account",
+                                                      type: "text",
+                                                      color: "teal accent-3"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-select", {
+                                                    staticClass: "pb-3",
+                                                    attrs: {
+                                                      items: _vm.batchtype,
+                                                      "menu-props": "auto",
+                                                      label:
+                                                        "Select Batch Type",
+                                                      "hide-details": "",
+                                                      "prepend-icon":
+                                                        "mdi-clipboard-account",
+                                                      "single-line": ""
+                                                    },
+                                                    model: {
+                                                      value: _vm.e1,
+                                                      callback: function($$v) {
+                                                        _vm.e1 = $$v
+                                                      },
+                                                      expression: "e1"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-select", {
+                                                    staticClass: "pb-3",
+                                                    attrs: {
+                                                      items: _vm.batch,
+                                                      "menu-props": "auto",
+                                                      label:
+                                                        "Select High School Batch Year",
+                                                      "hide-details": "",
+                                                      "prepend-icon":
+                                                        "mdi-group",
+                                                      "single-line": ""
+                                                    },
+                                                    model: {
+                                                      value: _vm.e1,
+                                                      callback: function($$v) {
+                                                        _vm.e1 = $$v
+                                                      },
+                                                      expression: "e1"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-select", {
+                                                    staticClass: "pb-3",
+                                                    attrs: {
+                                                      items: _vm.batch,
+                                                      "menu-props": "auto",
+                                                      label:
+                                                        "Select College Batch Year",
+                                                      "hide-details": "",
+                                                      "prepend-icon":
+                                                        "mdi-group",
+                                                      "single-line": ""
+                                                    },
+                                                    model: {
+                                                      value: _vm.e1,
+                                                      callback: function($$v) {
+                                                        _vm.e1 = $$v
+                                                      },
+                                                      expression: "e1"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      label: "Email",
+                                                      name: "Email",
+                                                      "prepend-icon":
+                                                        "mdi-email",
+                                                      type: "text",
+                                                      color: "teal accent-3"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      type: _vm.showPassword
+                                                        ? "text"
+                                                        : "password",
+                                                      label: "Password",
+                                                      "prepend-icon":
+                                                        "mdi-account-lock-outline",
+                                                      "append-icon": _vm.showPassword
+                                                        ? "mdi-eye"
+                                                        : "mdi-eye-off"
+                                                    },
+                                                    on: {
+                                                      "click:append": function(
+                                                        $event
+                                                      ) {
+                                                        _vm.showPassword = !_vm.showPassword
+                                                      }
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      type: _vm.showPasswordc
+                                                        ? "text"
+                                                        : "password",
+                                                      label: "Confirm Password",
+                                                      "prepend-icon":
+                                                        "mdi-account-lock-outline",
+                                                      "append-icon": _vm.showPasswordc
+                                                        ? "mdi-eye"
+                                                        : "mdi-eye-off"
+                                                    },
+                                                    on: {
+                                                      "click:append": function(
+                                                        $event
+                                                      ) {
+                                                        _vm.showPasswordc = !_vm.showPasswordc
+                                                      }
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "text-center mt-3 pb-3"
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  attrs: {
+                                                    rounded: "",
+                                                    color: "blue accent-3",
+                                                    dark: ""
+                                                  }
+                                                },
+                                                [_vm._v("SIGN UP")]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-card-actions",
-                            [
-                              _c("v-spacer"),
-                              _vm._v(" "),
-                              _c("v-btn", { attrs: { color: "primary" } }, [
-                                _vm._v("Login")
-                              ])
                             ],
                             1
                           )
@@ -80656,6 +81185,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LoginComponent_vue_vue_type_template_id_4d2414bf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoginComponent.vue?vue&type=template&id=4d2414bf& */ "./resources/js/components/LoginComponent.vue?vue&type=template&id=4d2414bf&");
 /* harmony import */ var _LoginComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoginComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/LoginComponent.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _LoginComponent_vue_vue_type_custom_index_0_blockType_v_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LoginComponent.vue?vue&type=custom&index=0&blockType=v-main */ "./resources/js/components/LoginComponent.vue?vue&type=custom&index=0&blockType=v-main");
+/* harmony import */ var _LoginComponent_vue_vue_type_custom_index_0_blockType_v_main__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_LoginComponent_vue_vue_type_custom_index_0_blockType_v_main__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -80674,10 +81205,25 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
+/* custom blocks */
+
+if (typeof _LoginComponent_vue_vue_type_custom_index_0_blockType_v_main__WEBPACK_IMPORTED_MODULE_3___default.a === 'function') _LoginComponent_vue_vue_type_custom_index_0_blockType_v_main__WEBPACK_IMPORTED_MODULE_3___default()(component)
+
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/LoginComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/LoginComponent.vue?vue&type=custom&index=0&blockType=v-main":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/LoginComponent.vue?vue&type=custom&index=0&blockType=v-main ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
