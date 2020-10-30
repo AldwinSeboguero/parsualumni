@@ -92,12 +92,41 @@
                               type="text"
                               color="teal accent-3" /> 
                                 <v-text-field
-                              label="Name"
-                              name="Name"
+                              label="First Name"
+                              name="FName"
                               prepend-icon="mdi-account"
                               type="text"
                               color="teal accent-3"
+                              v-model="fname"
+                              :error-messages="fnameErrors" 
+                              required
+                              @input="$v.fname.$touch()"
+                              @blur="$v.fname.$touch()"
                              /> 
+                                <v-text-field
+                              label="Last Name"
+                              name="LName"
+                              prepend-icon="mdi-account"
+                              type="text"
+                              color="teal accent-3"
+                              v-model="lname"
+                              :error-messages="lnameErrors" 
+                              required
+                              @input="$v.lname.$touch()"
+                              @blur="$v.lname.$touch()"
+                             /> 
+                             <v-text-field
+                              label="Middle Name"
+                              name="MName"
+                              prepend-icon="mdi-account"
+                              type="text"
+                              color="teal accent-3"
+                              v-model="mname"
+                              :error-messages="mnameErrors"  
+                              @input="$v.mname.$touch()"
+                              @blur="$v.mname.$touch()"
+                             /> 
+                             
                                 <v-select
                                 v-model="e1"
                                 :items="batchtype"
@@ -106,7 +135,7 @@
                                 hide-details
                                 prepend-icon="mdi-clipboard-account"
                                 class="pb-3"
-                                single-line
+                                single-line  
                               ></v-select>
                               <v-select
                                 v-model="e1"
@@ -131,15 +160,26 @@
                                <v-text-field
                               label="Email"
                               name="Email"
-                              prepend-icon="mdi-email"
+                              prepend-icon="mdi-mail"
                               type="text"
-                              color="teal accent-3" />
+                              color="teal accent-3" 
+                              v-model="email"
+                              :error-messages="emailErrors" 
+                              required
+                              @input="$v.email.$touch()"
+                              @blur="$v.email.$touch()"
+                              />
                               <v-text-field 
                               :type="showPassword ? 'text' : 'password'" 
                               label="Password"
                               prepend-icon="mdi-account-lock-outline"
                               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                               @click:append="showPassword = !showPassword"
+                              v-model="password" 
+                              :error-messages="passwordErrors" 
+                              required
+                              @input="$v.password.$touch()"
+                              @blur="$v.password.$touch()"
                             />
                             <v-text-field 
                               :type="showPasswordc ? 'text' : 'password'" 
@@ -147,11 +187,16 @@
                               prepend-icon="mdi-account-lock-outline"
                               :append-icon="showPasswordc ? 'mdi-eye' : 'mdi-eye-off'"
                               @click:append="showPasswordc = !showPasswordc"
+                              v-model="confirmPassword" 
+                              :error-messages="confirmPasswordErrors" 
+                              required
+                              @input="$v.confirmPassword.$touch()"
+                              @blur="$v.confirmPassword.$touch()"
                             />
                             </v-form>
                           </v-card-text>
                           <div class="text-center mt-3 pb-3">
-                            <v-btn rounded color="blue accent-3" dark>SIGN UP</v-btn>
+                            <v-btn rounded color="blue accent-3" @click="register()" dark>SIGN UP</v-btn>
                           </div>
                         </v-col>
                       </v-row>
@@ -166,8 +211,25 @@
 </template>
 
 <script>
+import { validationMixin } from "vuelidate";
+import { required, minLength, email, sameAs } from "vuelidate/lib/validators";
+ 
 export default {
+  mixins: [validationMixin],
+  validations: {
+    name: { required, minLength: minLength(4) },
+    email: { required, email },
+    password: { required, minLength: minLength(6) },
+    confirmPassword: { sameAsPassword: sameAs("password") }
+  },
  data: () => ({
+ fname: "",
+ lname: "",
+ mname: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+  status: null, 
    step: 1,
    showPassword: false, 
    showPasswordc: false, 
@@ -187,52 +249,75 @@ export default {
    source: String
  },
  name: 'App',
+
+ computed: {
+    fnameErrors() {
+      const errors = [];
+      if (!this.$v.fname) return errors;
+      !this.$v.fname.minLength &&
+        errors.push("Name must be at least 4 characters long.");
+      !this.$v.fname.required && errors.push("Name is required.");
+      return errors;
+    },
+    lnameErrors() {
+      const errors = [];
+      if (!this.$v.lname) return errors;
+      !this.$v.lname.minLength &&
+        errors.push("Name must be at least 4 characters long.");
+      !this.$v.lname.required && errors.push("Name is required.");
+      return errors;
+    },
+    mnameErrors() {
+      const errors = [];
+      if (!this.$v.mname) return errors;
+      !this.$v.mname.minLength &&
+        errors.push("Name must be at least 4 characters long.");
+      !this.$v.mname.required && errors.push("Name is required.");
+      return errors;
+    },
+     emailErrors() {
+      const errors = [];
+      if (!this.$v.email) return errors;
+      !this.$v.email.email && errors.push("Must be valid e-mail");
+      !this.$v.email.required && errors.push("E-mail is required");
+      return errors;
+    },
+     passwordErrors() {
+      const errors = [];
+      if (!this.$v.password) return errors;
+      !this.$v.password.minLength &&
+        errors.push("Password must be at least 6 characters long");
+      !this.$v.password.required && errors.push("Password is required");
+      return errors;
+    },
+    confirmPasswordErrors() {
+      const errors = [];
+      if (!this.$v.confirmPassword) return errors;
+      !this.$v.confirmPassword.sameAsPassword &&
+        errors.push("Password must be at least 8 characters long");
+      return errors;
+    }
+ },
+ methods: {
+    async register() {
+      this.$v.$touch();
+      this.$store
+        .dispatch("register", {
+          fname: this.fname,
+          email: this.email,
+          password: this.password
+        })
+        .then(() => {
+          this.$router.push({ name: "Dashboard" });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    cancel() {
+      return this.$router.push({ name: "Home" });
+    }
+  }
   
 }
 </script>
-
-// <v-main>
-//       <v-container
-//         class="fill-height"
-//         fluid
-//       >
-//         <v-row
-//           align="center"
-//           justify="center"
-//         >
-//           <v-col
-//             cols="12"
-//             sm="8"
-//             md="4"
-//           >
-//            <v-card >
-//               <v-card-title class="pb-6 align-center">
-//                 <h1>Login</h1>
-//               </v-card-title>
-//               <v-card-text>
-//                 <v-divider></v-divider>
-//                 <v-form>
-//                   <v-text-field 
-//                     label="Username" 
-//                     prepend-icon="mdi-account-circle-outline"
-//                   />
-//                   <v-text-field 
-//                     :type="showPassword ? 'text' : 'password'" 
-//                     label="Password"
-//                     prepend-icon="mdi-account-lock-outline"
-//                     :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-//                     @click:append="showPassword = !showPassword"
-//                   />
-//                 </v-form>
-//               </v-card-text>
-//               <v-divider></v-divider>
-//               <v-card-actions>
-//                 <v-btn color="success">Register</v-btn>
-//                 <v-btn color="info">Login</v-btn>
-//               </v-card-actions>
-//             </v-card>
-//           </v-col>
-//         </v-row>
-//       </v-container>
-//     </v-main>
-//   </v-app>

@@ -4,27 +4,35 @@
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
       app
+      temporary
     >
+      <template v-slot:prepend>
+        <v-list-item two-line>
+          <v-list-item-avatar>
+            <img
+              src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.0-9/118419981_3221515724561567_764454760029520824_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=y3q5ZMUytYcAX_wqcCO&_nc_ht=scontent.fmnl4-1.fna&oh=e850304c57e5455faac02fd5d82218f0&oe=5F85762B"
+            />
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title> Aldwin Seboguero</v-list-item-title>
+            <v-list-item-subtitle>Administrator</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
+
+      <v-divider></v-divider>
+
       <v-list dense>
         <template v-for="item in items">
-          <v-row
-            v-if="item.heading"
-            :key="item.heading"
-            align="center"
-          >
+          <v-row v-if="item.heading" :key="item.heading" align="center">
             <v-col cols="6">
               <v-subheader v-if="item.heading">
                 {{ item.heading }}
               </v-subheader>
             </v-col>
-            <v-col
-              cols="6"
-              class="text-center"
-            >
-              <a
-                href="#!"
-                class="body-2 black--text"
-              >EDIT</a>
+            <v-col cols="6" class="text-center">
+              <a href="#!" class="body-2 black--text">EDIT</a>
             </v-col>
           </v-row>
           <v-list-group
@@ -44,6 +52,7 @@
             <v-list-item
               v-for="(child, i) in item.children"
               :key="i"
+              :to="child.link"
               link
             >
               <v-list-item-action v-if="child.icon">
@@ -56,11 +65,7 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-          <v-list-item
-            v-else
-            :key="item.text"
-            link
-          >
+          <v-list-item v-else :key="item.text" :to="item.link" link>
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -79,13 +84,17 @@
       app
       color="green darken-3"
       dark
+      flat
+      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+      fixed
+      class="elevation-1"
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title
-        style="width: 300px"
-        class="ml-0 pl-4"
-      >
-        <span class="hidden-sm-and-down">ParSU Alumni</span>
+      <v-app-bar-nav-icon
+        @click.stop="drawer = !drawer"
+        class="hidden-md-and-up"
+      ></v-app-bar-nav-icon>
+      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+        <span>ParSU Alumni</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -102,182 +111,142 @@
       <v-btn icon>
         <v-icon>mdi-bell</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        large
-      >
-        <v-avatar
-          size="32px"
-          item
-        >
+      <v-btn icon large>
+        <v-avatar size="32px" item>
           <v-img
             src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
             alt="Vuetify"
-          ></v-img></v-avatar>
+          ></v-img
+        ></v-avatar>
       </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
+      <template v-slot:extension class="hidden-sm-and-down">
+        <v-tabs
+          centered
+          class="ml-n9 hidden-sm-and-down"
+          color="grey darken-1"
+          background-color="white" 
         >
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                :href="source"
-                icon
-                large
-                target="_blank"
-                v-on="on"
-              >
-                <v-icon large>mdi-code-tags</v-icon>
-              </v-btn>
-            </template>
-            <span>Source</span>
-          </v-tooltip>
-        </v-row>
-      </v-container>
+        <v-tabs-slider color="light-blue"></v-tabs-slider>
+          <v-tab v-for="link in links" :key="link" class="grey--text">
+            {{ link }}
+          </v-tab>
+        </v-tabs>
+      </template>
+    </v-app-bar>
+
+    <v-main>
+      <router-view></router-view>
+
+      <v-footer dark padless>
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="white lighten-1 black--text text-center"
+        >
+          <v-card-text>
+            <v-btn class="mx-4 black--text" icon>
+              <v-icon size="24px"> mdi-web </v-icon>
+            </v-btn>
+            <v-btn class="mx-4 black--text" icon>
+              <v-icon size="24px"> mdi-facebook </v-icon>
+            </v-btn>
+            <v-btn class="mx-4 black--text" icon>
+              <v-icon size="24px"> mdi-twitter </v-icon>
+            </v-btn>
+            <v-btn class="mx-4 black--text" icon>
+              <v-icon size="24px"> mdi-youtube </v-icon>
+            </v-btn>
+          </v-card-text>
+
+          <v-card-text class="black--text pt-0"> </v-card-text>
+
+          <v-card-text class="black--text">
+            {{ new Date().getFullYear() }} &copy;
+            <strong>ICTMO, Partido State University</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
     </v-main>
-    <v-btn
-      bottom
-      color="pink"
-      dark
-      fab
-      fixed
-      right
-      @click="dialog = !dialog"
-    >
-      <v-icon>mdi-plus</v-icon>
-    </v-btn>
-    <v-dialog
-      v-model="dialog"
-      width="800px"
-    >
-      <v-card>
-        <v-card-title class="grey darken-2">
-          Create contact
-        </v-card-title>
-        <v-container>
-          <v-row class="mx-2">
-            <v-col
-              class="align-center justify-space-between"
-              cols="12"
-            >
-              <v-row
-                align="center"
-                class="mr-0"
-              >
-                <v-avatar
-                  size="40px"
-                  class="mx-3"
-                >
-                  <img
-                    src="//ssl.gstatic.com/s2/oz/images/sge/grey_silhouette.png"
-                    alt=""
-                  >
-                </v-avatar>
-                <v-text-field
-                  placeholder="Name"
-                ></v-text-field>
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                prepend-icon="mdi-account-card-details-outline"
-                placeholder="Company"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                placeholder="Job title"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                prepend-icon="mdi-mail"
-                placeholder="Email"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                type="tel"
-                prepend-icon="mdi-phone"
-                placeholder="(000) 000 - 0000"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                prepend-icon="mdi-text"
-                placeholder="Notes"
-              ></v-text-field>
-            </v-col>
-          </v-row>
-        </v-container>
-        <v-card-actions>
-          <v-btn
-            text
-            color="primary"
-          >More</v-btn>
-          <v-spacer></v-spacer>
-          <v-btn
-            text
-            color="primary"
-            @click="dialog = false"
-          >Cancel</v-btn>
-          <v-btn
-            text
-            @click="dialog = false"
-          >Save</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
   </v-app>
 </template>
 
 <script>
-  export default {
-    props: {
-      source: String,
-    },
-    data: () => ({
-      dialog: false,
-      drawer: null,
-      items: [
-        { icon: 'mdi-contacts', text: 'Contacts' },
-        { icon: 'mdi-history', text: 'Frequently contacted' },
-        { icon: 'mdi-content-copy', text: 'Duplicates' },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'Labels',
-          model: true,
-          children: [
-            { icon: 'mdi-plus', text: 'Create label' },
-          ],
-        },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
-        },
-        { icon: 'mdi-cog', text: 'Settings' },
-        { icon: 'mdi-message', text: 'Send feedback' },
-        { icon: 'mdi-help-circle', text: 'Help' },
-        { icon: 'mdi-cellphone-link', text: 'App downloads' },
-        { icon: 'mdi-keyboard', text: 'Go to the old version' },
-      ],
-    }),
-  }
+export default {
+  name: "main-app",
+  props: {
+    source: String,
+  },
+  data: () => ({
+    links: [
+      "Live Feed",
+      "People",
+      "Event",
+      "Career",
+      "Entrepreneurship",
+      "Help Needed",
+    ],
+    dialog: false,
+    drawer: false,
+    items: [
+      {
+        icon: "mdi-view-dashboard",
+        text: "Dashboard",
+        link: "/admin/dashboard",
+      },
+      {
+        icon: "mdi-account-multiple",
+        text: "Student List",
+        link: "/admin/student/list",
+      },
+      {
+        icon: "mdi-chevron-up",
+        "icon-alt": "mdi-chevron-down",
+        text: "Admin Setup",
+        model: false,
+        children: [
+          { text: "Campuses", link: "/admin/campuses" },
+          { text: "Colleges", link: "/admin/colleges" },
+          { text: "Programs", link: "/admin/programs" },
+          { text: "Sections", link: "/admin/sections" },
+          { text: "Semester", link: "/admin/semesters" },
+          { text: "Graduation Schedule", link: "/admin/graduations" },
+          { text: "Purposes", link: "/admin/purposes" },
+        ],
+      },
+      {
+        icon: "mdi-clipboard-list",
+        text: "Clearance Requests",
+        link: "/admin/clearance/requests",
+      },
+      {
+        icon: "mdi-account-check",
+        text: "Cleared Student Clearances",
+        link: "/admin/cleared/clearances",
+      },
+      {
+        icon: "mdi-send-circle",
+        text: "Submitted Clearances",
+        link: "/admin/submitted/clearances",
+      },
+      {
+        icon: "mdi-clipboard-check",
+        text: "Active Clearance",
+        link: "/admin/active/clearance",
+      },
+      {
+        icon: "mdi-clipboard-text",
+        text: "Clearance List",
+        link: "/admin/clearance/list",
+      },
+      {
+        icon: "mdi-history",
+        text: "List of Deficiency",
+        link: "/admin/deficiency/list",
+      },
+      { icon: "mdi-cog", text: "Settings", link: "/admin/settings" },
+      { icon: "mdi-logout", text: "Logout", link: "/login" },
+    ],
+  }),
+};
 </script>
