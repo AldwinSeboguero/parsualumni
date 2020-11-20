@@ -106,7 +106,7 @@
       ></v-text-field>
       <v-spacer></v-spacer>
       <v-btn icon>
-        <v-icon>mdi-apps</v-icon>
+        <v-icon>mdi-email</v-icon>
       </v-btn>
       <v-btn icon>
         <v-icon>mdi-bell</v-icon>
@@ -114,7 +114,7 @@
       <v-btn icon large>
         <v-avatar size="32px" item>
           <v-img
-            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
+            src="img/psu_logo.png"
             alt="Vuetify"
           ></v-img
         ></v-avatar>
@@ -122,7 +122,7 @@
       <template v-slot:extension class="hidden-sm-and-down">
         <v-tabs
           centered
-          class="ml-n9 hidden-sm-and-down"
+          class="ml-n9 "
           color="grey darken-1"
           background-color="white" 
         >

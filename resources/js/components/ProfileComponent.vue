@@ -1,18 +1,47 @@
 <template>
   <v-app style="padding: 0" id="inspire">
-    <v-parallax
+    <v-card   
+  >
+    <v-img
+      height="300px"
+      src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+      class="elevation-2"
       
-      src="https://picsum.photos/1510/400?random"
-
-      dark
     >
-      <v-row align="center"  >
-        <v-col class="text-center" cols="12">
-          <h1 class="display-1 font-weight-thin mb-4"><v-avatar></v-avatar></h1>
-          <h1 class="subheading">Aldwin Seboguero</h1>
+      <v-row
+        align="end"
+        class="fill-height"
+      >
+        <v-col
+          align-self="start" 
+          cols="12"
+          style="padding-left:20px"
+        >
+          <v-avatar
+            class="profile"
+            color="grey"
+            size="200"
+            
+            circle
+          >
+            <v-img src="/img/aldwin.jpg"></v-img>
+          </v-avatar>
+        </v-col>
+        <v-col class="py-0">
+          <v-list-item
+            color="rgba(0, 0, 0, .4)"
+            dark
+              style="padding-left:30px"
+          >
+            <v-list-item-content>
+              <v-list-item-title class="title">Aldwin Seboguero</v-list-item-title>
+              <v-list-item-subtitle>Fullstack Developer</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
         </v-col>
       </v-row>
-    </v-parallax>
+    </v-img>
+  </v-card>
 
     <v-main class="grey lighten-3" style="padding: 0">
       <!-- <v-list two-line>
@@ -61,10 +90,10 @@
                             style="padding-left: 10px"
                           >
                             <v-chip :ripple="false" outlined rounded small>
-                              Default
+                              Government
                             </v-chip>
                             <v-chip :ripple="false" outlined rounded small>
-                              Default
+                              Education
                             </v-chip>
                           </v-chip-group>
                         </div>
@@ -249,12 +278,12 @@ export default {
         },
       ],
       tags: [
-        "Programming",
-        "Photo Editing",
-        "Programming",
-        "Photo Editing",
-        "Photo Editing",
-        "Programming",
+        "Html 5",
+        "CSS 3",
+        "Laravel",
+        "Vuejs",
+        "Mysql",
+        "Postgresql",
         "Photo Editing",
       ],
 

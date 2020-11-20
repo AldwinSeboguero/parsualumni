@@ -6,7 +6,7 @@ import ProfileComponent from './components/ProfileComponent';
 import EventComponent from './components/EventComponent'; 
 import PeopleComponent from './components/PeopleComponent'; 
 import LiveFeedComponent from './components/LiveFeedComponent'; 
-
+import CareerComponent from './components/CareerComponent'; 
 
 Vue.use(VueRouter);
 
@@ -44,6 +44,11 @@ const routes =[
                 path: 'newsfeed',
                 component: LiveFeedComponent,
                 name: 'newsfeed' 
+            },
+            {
+                path: 'career',
+                component: CareerComponent,
+                name: 'career' 
             },
             ]
     },

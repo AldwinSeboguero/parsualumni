@@ -2285,6 +2285,128 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CareerComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CareerComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EventComponent.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EventComponent.vue?vue&type=script&lang=js& ***!
@@ -2358,6 +2480,52 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3261,6 +3429,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3280,7 +3477,7 @@ __webpack_require__.r(__webpack_exports__);
         color: "orange",
         year: "2000"
       }],
-      tags: ["Programming", "Photo Editing", "Programming", "Photo Editing", "Photo Editing", "Programming", "Photo Editing"],
+      tags: ["Html 5", "CSS 3", "Laravel", "Vuejs", "Mysql", "Postgresql", "Photo Editing"],
       items: [{
         action: "mdi-mail",
         title: "aldwin.seboguero@parsu.edu.ph"
@@ -22634,7 +22831,7 @@ var render = function() {
                   _c(
                     "v-tabs",
                     {
-                      staticClass: "ml-n9 hidden-sm-and-down",
+                      staticClass: "ml-n9 ",
                       attrs: {
                         centered: "",
                         color: "grey darken-1",
@@ -22693,7 +22890,7 @@ var render = function() {
           _c(
             "v-btn",
             { attrs: { icon: "" } },
-            [_c("v-icon", [_vm._v("mdi-apps")])],
+            [_c("v-icon", [_vm._v("mdi-email")])],
             1
           ),
           _vm._v(" "),
@@ -22713,10 +22910,7 @@ var render = function() {
                 { attrs: { size: "32px", item: "" } },
                 [
                   _c("v-img", {
-                    attrs: {
-                      src: "https://cdn.vuetifyjs.com/images/logos/logo.svg",
-                      alt: "Vuetify"
-                    }
+                    attrs: { src: "img/psu_logo.png", alt: "Vuetify" }
                   })
                 ],
                 1
@@ -22860,6 +23054,183 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-app",
+    { staticStyle: { padding: "0" }, attrs: { id: "inspire" } },
+    [
+      _c(
+        "v-parallax",
+        {
+          staticClass: "elevation-2",
+          staticStyle: {
+            "background-image":
+              "linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(https://picsum.photos/1510/400?random)"
+          },
+          attrs: { dark: "", height: "300" }
+        },
+        [
+          _c(
+            "v-row",
+            { attrs: { align: "center" } },
+            [
+              _c(
+                "v-col",
+                { staticClass: "text-right", attrs: { cols: "12" } },
+                [
+                  _c("v-menu", {
+                    attrs: {
+                      bottom: "",
+                      left: "",
+                      transition: "slide-y-transition"
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "activator",
+                        fn: function(ref) {
+                          var on = ref.on
+                          var attrs = ref.attrs
+                          return [
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "primary",
+                                attrs: { tile: "", dark: "", rounded: "" }
+                              },
+                              [
+                                _c("v-icon", [_vm._v("mdi-plus")]),
+                                _vm._v(" "),
+                                _c("span", [_vm._v("New Opportunity")])
+                              ],
+                              1
+                            )
+                          ]
+                        }
+                      }
+                    ])
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { staticClass: "text-center", attrs: { cols: "12" } },
+                [
+                  _c(
+                    "h1",
+                    { staticClass: "display-1 font-weight-thin mb-4" },
+                    [_c("v-avatar")],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "subheading" }, [
+                    _vm._v("OPPORTUNITES AND HELP REQUEST")
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-row",
+        { attrs: { "no-gutters": "" } },
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [_c("v-sheet", { attrs: { height: "30" } })],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-main",
+        { staticClass: "grey lighten-3", staticStyle: { padding: "0" } },
+        [
+          _c(
+            "v-container",
+            { staticStyle: { "margin-top": "0" }, attrs: { fluid: "" } },
+            [
+              _c(
+                "v-row",
+                _vm._l(4, function(n) {
+                  return _c(
+                    "v-col",
+                    { key: n, attrs: { cols: "12", sm: "6" } },
+                    [
+                      _c(
+                        "v-sheet",
+                        { attrs: { rounded: "lg", "min-height": "268" } },
+                        [
+                          _c(
+                            "v-row",
+                            { staticClass: "grey lighten-3" },
+                            _vm._l(4, function(n) {
+                              return _c(
+                                "v-col",
+                                {
+                                  key: n,
+                                  staticStyle: { "padding-top": "0" },
+                                  attrs: { cols: "12" }
+                                },
+                                [
+                                  _c("v-sheet", {
+                                    staticClass: "1",
+                                    attrs: { elevation: "0" }
+                                  })
+                                ],
+                                1
+                              )
+                            }),
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                }),
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EventComponent.vue?vue&type=template&id=6b24092e&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EventComponent.vue?vue&type=template&id=6b24092e& ***!
@@ -22980,7 +23351,14 @@ var render = function() {
     [
       _c(
         "v-parallax",
-        { attrs: { src: "https://picsum.photos/1510/400?random", dark: "" } },
+        {
+          staticClass: "elevation-2",
+          staticStyle: {
+            "background-image":
+              "linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(https://picsum.photos/1510/400?random)"
+          },
+          attrs: { dark: "", height: "300" }
+        },
         [
           _c(
             "v-row",
@@ -23059,12 +23437,11 @@ var render = function() {
                                           _c(
                                             "v-row",
                                             { attrs: { "no-gutters": "" } },
-                                            _vm._l(4, function(n) {
-                                              return _c(
+                                            [
+                                              _c(
                                                 "v-col",
                                                 {
-                                                  key: n,
-                                                  attrs: { cols: "12", sm: "3" }
+                                                  attrs: { cols: "3", sm: "3" }
                                                 },
                                                 [
                                                   _c(
@@ -23081,11 +23458,169 @@ var render = function() {
                                                       _c(
                                                         "div",
                                                         [
-                                                          _c("v-icon", [
-                                                            _vm._v(
-                                                              "mdi-compass-outline"
-                                                            )
-                                                          ])
+                                                          _c("v-icon", {
+                                                            staticClass:
+                                                              "mdi mdi-compass-outline",
+                                                            attrs: {
+                                                              small: "",
+                                                              text: _vm.Trip
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "body-2 hidden-sm-and-down",
+                                                              attrs: {
+                                                                small: ""
+                                                              }
+                                                            },
+                                                            [_vm._v("Trip")]
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-col",
+                                                {
+                                                  attrs: { cols: "3", sm: "3" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "pa-2 text-center primary",
+                                                      attrs: {
+                                                        dark: "",
+                                                        outlined: "",
+                                                        tile: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        [
+                                                          _c("v-icon", {
+                                                            staticClass:
+                                                              "mdi mdi-pen",
+                                                            attrs: { small: "" }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "body-2 hidden-sm-and-down",
+                                                              attrs: {
+                                                                small: ""
+                                                              }
+                                                            },
+                                                            [_vm._v("Post")]
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-col",
+                                                {
+                                                  attrs: { cols: "3", sm: "3" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "pa-2 text-center",
+                                                      attrs: {
+                                                        outlined: "",
+                                                        tile: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        [
+                                                          _c("v-icon", {
+                                                            staticClass:
+                                                              "mdi mdi-calendar",
+                                                            attrs: { small: "" }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "body-2 hidden-sm-and-down",
+                                                              attrs: {
+                                                                small: ""
+                                                              }
+                                                            },
+                                                            [_vm._v("Event")]
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-col",
+                                                {
+                                                  attrs: { cols: "3", sm: "3" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "pa-2 text-center",
+                                                      attrs: {
+                                                        outlined: "",
+                                                        tile: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        [
+                                                          _c("v-icon", {
+                                                            staticClass:
+                                                              "mdi mdi-briefcase-outline",
+                                                            attrs: { small: "" }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "body-2 hidden-sm-and-down",
+                                                              attrs: {
+                                                                small: ""
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Oppurtunity"
+                                                              )
+                                                            ]
+                                                          )
                                                         ],
                                                         1
                                                       )
@@ -23094,7 +23629,7 @@ var render = function() {
                                                 ],
                                                 1
                                               )
-                                            }),
+                                            ],
                                             1
                                           )
                                         ],
@@ -23112,18 +23647,15 @@ var render = function() {
                           _c(
                             "v-row",
                             { staticClass: "grey lighten-3" },
-                            [
-                              _c(
+                            _vm._l(4, function(n) {
+                              return _c(
                                 "v-col",
                                 {
+                                  key: n,
                                   staticStyle: { "padding-top": "0" },
                                   attrs: { cols: "12" }
                                 },
                                 [
-                                  _c("v-card-title", [_vm._v("Experiences")]),
-                                  _vm._v(" "),
-                                  _c("v-divider"),
-                                  _vm._v(" "),
                                   _c(
                                     "v-sheet",
                                     {
@@ -23132,84 +23664,96 @@ var render = function() {
                                     },
                                     [
                                       _c(
-                                        "v-container",
-                                        { attrs: { fluid: "" } },
+                                        "v-card",
+                                        { staticClass: "mx-auto" },
                                         [
                                           _c(
-                                            "v-list",
-                                            {
-                                              attrs: {
-                                                "two-line": "",
-                                                subheader: ""
-                                              }
-                                            },
-                                            _vm._l(_vm.items2, function(item) {
-                                              return _c(
-                                                "v-list-item",
-                                                { key: item.title },
+                                            "v-list-item",
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                { attrs: { color: "grey" } },
+                                                [
+                                                  _c("v-img", {
+                                                    attrs: {
+                                                      src: "img/aldwin.jpg"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
                                                 [
                                                   _c(
-                                                    "v-list-item-avatar",
+                                                    "v-list-item-title",
+                                                    { staticClass: "headline" },
                                                     [
-                                                      _c("v-icon", [
-                                                        _vm._v("mdi-domain")
-                                                      ])
-                                                    ],
-                                                    1
+                                                      _vm._v(
+                                                        "Our Changing Planet"
+                                                      )
+                                                    ]
                                                   ),
                                                   _vm._v(" "),
-                                                  _c(
-                                                    "v-list-item-content",
-                                                    [
-                                                      _c("v-list-item-title", {
-                                                        domProps: {
-                                                          textContent: _vm._s(
-                                                            item.title
-                                                          )
-                                                        }
-                                                      }),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-list-item-subtitle",
-                                                        {
-                                                          staticClass:
-                                                            "primary--text"
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                small: "",
-                                                                color: "primary"
-                                                              }
-                                                            },
-                                                            [_vm._v("mdi-home")]
-                                                          ),
-                                                          _vm._v(
-                                                            "\n                            Partido State University\n                          "
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-list-item-subtitle",
-                                                        {
-                                                          domProps: {
-                                                            textContent: _vm._s(
-                                                              item.subtitle
-                                                            )
-                                                          }
-                                                        }
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
+                                                  _c("v-list-item-subtitle", [
+                                                    _vm._v(
+                                                      "by Aldwin Seboguero"
+                                                    )
+                                                  ])
                                                 ],
                                                 1
                                               )
-                                            }),
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-card-text", [
+                                            _vm._v(
+                                              "\n                      Visit ten places on our planet that are undergoing the\n                      biggest changes today.\n                    "
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("v-divider"),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-actions",
+                                            [
+                                              _c("v-spacer"),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-comment")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
                                             1
                                           )
                                         ],
@@ -23221,7 +23765,7 @@ var render = function() {
                                 ],
                                 1
                               )
-                            ],
+                            }),
                             1
                           )
                         ],
@@ -23237,186 +23781,148 @@ var render = function() {
                     [
                       _c(
                         "v-sheet",
-                        { attrs: { "min-height": "40vh" } },
+                        { attrs: { "min-height": "20vh" } },
                         [
                           _c(
                             "v-card-title",
                             { staticStyle: { "padding-bottom": "0" } },
-                            [_vm._v("Contacts")]
+                            [_vm._v("Recently Connected")]
                           ),
                           _vm._v(" "),
                           _c("v-divider"),
                           _vm._v(" "),
                           _c(
-                            "v-list",
-                            { attrs: { "two-line": "" } },
-                            [
-                              _c(
-                                "v-list-item",
+                            "v-row",
+                            _vm._l(6, function(n) {
+                              return _c(
+                                "v-col",
+                                {
+                                  key: n,
+                                  staticStyle: { "padding-bottom": "0" },
+                                  attrs: { cols: "12", md: "6" }
+                                },
                                 [
                                   _c(
-                                    "v-list-item-icon",
+                                    "v-list-item",
+                                    { attrs: { "three-line": "" } },
                                     [
                                       _c(
-                                        "v-icon",
-                                        { attrs: { color: "indigo" } },
-                                        [_vm._v(" mdi-phone ")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c("v-list-item-title", [
-                                        _vm._v("(63) 9302418587")
-                                      ]),
+                                        "v-list-item-avatar",
+                                        {
+                                          attrs: {
+                                            tile: "",
+                                            size: "30",
+                                            color: "grey"
+                                          }
+                                        },
+                                        [_vm._v("\n                    I")]
+                                      ),
                                       _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("Mobile")
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-icon",
-                                    [
-                                      _c("v-icon", [_vm._v("mdi-message-text")])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item",
-                                [
-                                  _c("v-list-item-action"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c("v-list-item-title", [
-                                        _vm._v("(63) 9302418587")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("Work")
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-icon",
-                                    [
-                                      _c("v-icon", [_vm._v("mdi-message-text")])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { attrs: { inset: "" } }),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item",
-                                [
-                                  _c(
-                                    "v-list-item-icon",
-                                    [
                                       _c(
-                                        "v-icon",
-                                        { attrs: { color: "indigo" } },
-                                        [_vm._v(" mdi-email ")]
+                                        "v-list-item-content",
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "text-xs-left subtitle-2"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      Aldwin Seboguero\n                    "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-subtitle",
+                                            { attrs: { small: "" } },
+                                            [_vm._v("ICTMO Staff")]
+                                          )
+                                        ],
+                                        1
                                       )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c("v-list-item-title", [
-                                        _vm._v("sebogueroaldwin@gmail.com")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("Personal")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item",
-                                [
-                                  _c("v-list-item-action"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c("v-list-item-title", [
-                                        _vm._v("aldwin.seboguero@parsu.edu.ph")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("Work")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { attrs: { inset: "" } }),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item",
-                                [
-                                  _c(
-                                    "v-list-item-icon",
-                                    [
-                                      _c(
-                                        "v-icon",
-                                        { attrs: { color: "indigo" } },
-                                        [_vm._v(" mdi-map-marker ")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c("v-list-item-title", [
-                                        _vm._v("Zone 3 Matacla, Goa")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v(
-                                          "Camarines Sur, Philippines 4422"
-                                        )
-                                      ])
                                     ],
                                     1
                                   )
                                 ],
                                 1
                               )
-                            ],
+                            }),
                             1
                           )
                         ],
                         1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-sheet",
+                        {
+                          staticStyle: { "margin-top": "20px" },
+                          attrs: { "min-height": "20vh" }
+                        },
+                        [
+                          _c(
+                            "v-card-title",
+                            { staticStyle: { "padding-bottom": "0" } },
+                            [_vm._v("Upcoming Event")]
+                          ),
+                          _vm._v(" "),
+                          _c("v-divider"),
+                          _vm._v(" "),
+                          _vm._l(3, function(n) {
+                            return _c(
+                              "v-card",
+                              { key: n, staticClass: "mx-auto" },
+                              [
+                                _c(
+                                  "v-list-item",
+                                  { attrs: { "three-line": "" } },
+                                  [
+                                    _c("v-list-item-avatar", {
+                                      attrs: {
+                                        tile: "",
+                                        size: "80",
+                                        color: "grey"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-list-item-content",
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "overline mb-4" },
+                                          [_vm._v("Conference")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-list-item-title",
+                                          { staticClass: "subtitle-2 mb-1" },
+                                          [
+                                            _vm._v(
+                                              "Business Conference with dsk"
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("v-list-item-subtitle", [
+                                          _vm._v(
+                                            "Greyhound divisely hello coldly\n                    fonwderfully"
+                                          )
+                                        ])
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          })
+                        ],
+                        2
                       )
                     ],
                     1
@@ -24371,28 +24877,76 @@ var render = function() {
     { staticStyle: { padding: "0" }, attrs: { id: "inspire" } },
     [
       _c(
-        "v-parallax",
-        { attrs: { src: "https://picsum.photos/1510/400?random", dark: "" } },
+        "v-card",
         [
           _c(
-            "v-row",
-            { attrs: { align: "center" } },
+            "v-img",
+            {
+              staticClass: "elevation-2",
+              attrs: {
+                height: "300px",
+                src: "https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+              }
+            },
             [
               _c(
-                "v-col",
-                { staticClass: "text-center", attrs: { cols: "12" } },
+                "v-row",
+                { staticClass: "fill-height", attrs: { align: "end" } },
                 [
                   _c(
-                    "h1",
-                    { staticClass: "display-1 font-weight-thin mb-4" },
-                    [_c("v-avatar")],
+                    "v-col",
+                    {
+                      staticStyle: { "padding-left": "20px" },
+                      attrs: { "align-self": "start", cols: "12" }
+                    },
+                    [
+                      _c(
+                        "v-avatar",
+                        {
+                          staticClass: "profile",
+                          attrs: { color: "grey", size: "200", circle: "" }
+                        },
+                        [_c("v-img", { attrs: { src: "/img/aldwin.jpg" } })],
+                        1
+                      )
+                    ],
                     1
                   ),
                   _vm._v(" "),
-                  _c("h1", { staticClass: "subheading" }, [
-                    _vm._v("Aldwin Seboguero")
-                  ])
-                ]
+                  _c(
+                    "v-col",
+                    { staticClass: "py-0" },
+                    [
+                      _c(
+                        "v-list-item",
+                        {
+                          staticStyle: { "padding-left": "30px" },
+                          attrs: { color: "rgba(0, 0, 0, .4)", dark: "" }
+                        },
+                        [
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c(
+                                "v-list-item-title",
+                                { staticClass: "title" },
+                                [_vm._v("Aldwin Seboguero")]
+                              ),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v("Fullstack Developer")
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
               )
             ],
             1
@@ -24533,7 +25087,7 @@ var render = function() {
                                                         },
                                                         [
                                                           _vm._v(
-                                                            "\n                            Default\n                          "
+                                                            "\n                            Government\n                          "
                                                           )
                                                         ]
                                                       ),
@@ -24550,7 +25104,7 @@ var render = function() {
                                                         },
                                                         [
                                                           _vm._v(
-                                                            "\n                            Default\n                          "
+                                                            "\n                            Education\n                          "
                                                           )
                                                         ]
                                                       )
@@ -86153,6 +86707,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/CareerComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/CareerComponent.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CareerComponent.vue?vue&type=template&id=3b7a2804& */ "./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804&");
+/* harmony import */ var _CareerComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CareerComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/CareerComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CareerComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CareerComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CareerComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/CareerComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CareerComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CareerComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CareerComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CareerComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CareerComponent.vue?vue&type=template&id=3b7a2804& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CareerComponent.vue?vue&type=template&id=3b7a2804&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CareerComponent_vue_vue_type_template_id_3b7a2804___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/EventComponent.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/EventComponent.vue ***!
@@ -86516,6 +87139,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_EventComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/EventComponent */ "./resources/js/components/EventComponent.vue");
 /* harmony import */ var _components_PeopleComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/PeopleComponent */ "./resources/js/components/PeopleComponent.vue");
 /* harmony import */ var _components_LiveFeedComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/LiveFeedComponent */ "./resources/js/components/LiveFeedComponent.vue");
+/* harmony import */ var _components_CareerComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/CareerComponent */ "./resources/js/components/CareerComponent.vue");
+
 
 
 
@@ -86552,6 +87177,10 @@ var routes = [{
     path: 'newsfeed',
     component: _components_LiveFeedComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
     name: 'newsfeed'
+  }, {
+    path: 'career',
+    component: _components_CareerComponent__WEBPACK_IMPORTED_MODULE_8__["default"],
+    name: 'career'
   }]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

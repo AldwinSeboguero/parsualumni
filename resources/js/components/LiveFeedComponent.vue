@@ -1,6 +1,8 @@
 <template>
   <v-app style="padding: 0" id="inspire">
-    <v-parallax src="https://picsum.photos/1510/400?random" dark>
+    <v-parallax 
+     style="background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(https://picsum.photos/1510/400?random)"
+     dark  height="300" class="elevation-2">
       <v-row align="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-1 font-weight-thin mb-4"><v-avatar></v-avatar></h1>
@@ -28,14 +30,51 @@
             <v-sheet rounded="lg" min-height="268" class="grey lighten-3">
               <v-row class="grey lighten-3">
                 <v-col cols="12" sm="12" style="padding-top: 0">
-                  <v-card-title class="primary--text">News Feed</v-card-title> 
+                  <v-card-title class="primary--text">News Feed</v-card-title>
                   <v-sheet elevation="0" class="1">
                     <div>
                       <v-row no-gutters>
-                        <v-col v-for="n in 4" :key="n" cols="12" sm="3">
+                        <v-col cols="3" sm="3">
                           <v-card class="pa-2 text-center" outlined tile>
                             <div>
-                                <v-icon>mdi-compass-outline</v-icon>
+                              <v-icon
+                                small
+                                class="mdi mdi-compass-outline"
+                                :text="Trip"
+                              ></v-icon>
+                              <span class="body-2 hidden-sm-and-down" small>Trip</span>
+                            </div>
+                          </v-card>
+                        </v-col>
+                        <v-col cols="3" sm="3">
+                          <v-card
+                            class="pa-2 text-center primary"
+                            dark
+                            outlined
+                            tile
+                          >
+                            <div>
+                              <v-icon small class="mdi mdi-pen"></v-icon>
+                              <span class="body-2 hidden-sm-and-down" small>Post</span>
+                            </div>
+                          </v-card>
+                        </v-col>
+                        <v-col cols="3" sm="3">
+                          <v-card class="pa-2 text-center" outlined tile>
+                            <div>
+                              <v-icon small class="mdi mdi-calendar"></v-icon>
+                              <span class="body-2 hidden-sm-and-down" small>Event</span>
+                            </div>
+                          </v-card>
+                        </v-col>
+                        <v-col cols="3" sm="3">
+                          <v-card class="pa-2 text-center" outlined tile>
+                            <div>
+                              <v-icon
+                                small
+                                class="mdi mdi-briefcase-outline"
+                              ></v-icon>
+                              <span class="body-2 hidden-sm-and-down" small>Oppurtunity</span>
                             </div>
                           </v-card>
                         </v-col>
@@ -46,112 +85,119 @@
               </v-row>
 
               <v-row class="grey lighten-3">
-                <v-col cols="12" style="padding-top: 0">
-                  <v-card-title>Experiences</v-card-title>
-                  <v-divider></v-divider>
+                <v-col cols="12" style="padding-top: 0" v-for="n in 4" :key="n">
                   <v-sheet elevation="0" class="1">
-                    <v-container fluid>
-                      <v-list two-line subheader>
-                        <v-list-item v-for="item in items2" :key="item.title">
-                          <v-list-item-avatar>
-                            <v-icon>mdi-domain</v-icon>
-                          </v-list-item-avatar>
+                    <v-card class="mx-auto">
+                      <v-list-item>
+                        <v-list-item-avatar color="grey">
+                          <v-img src="img/aldwin.jpg"></v-img>
+                        </v-list-item-avatar>
+                        <v-list-item-content>
+                          <v-list-item-title class="headline"
+                            >Our Changing Planet</v-list-item-title
+                          >
+                          <v-list-item-subtitle
+                            >by Aldwin Seboguero</v-list-item-subtitle
+                          >
+                        </v-list-item-content>
+                      </v-list-item>
 
-                          <v-list-item-content>
-                            <v-list-item-title
-                              v-text="item.title"
-                            ></v-list-item-title>
-                            <v-list-item-subtitle class="primary--text">
-                              <v-icon small color="primary">mdi-home</v-icon>
-                              Partido State University
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle
-                              v-text="item.subtitle"
-                            ></v-list-item-subtitle>
-                          </v-list-item-content>
-                        </v-list-item>
-                      </v-list>
-                    </v-container>
+                      <v-card-text>
+                        Visit ten places on our planet that are undergoing the
+                        biggest changes today.
+                      </v-card-text>
+                      <v-divider></v-divider>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn icon>
+                          <v-icon>mdi-share-variant</v-icon>
+                        </v-btn>
+                        <v-btn icon>
+                          <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+
+                        <v-btn icon>
+                          <v-icon>mdi-comment</v-icon>
+                        </v-btn>
+                      </v-card-actions>
+                    </v-card>
                   </v-sheet>
                 </v-col>
               </v-row>
             </v-sheet>
           </v-col>
           <v-col cols="12" sm="4">
-            <v-sheet min-height="40vh">
-              <v-card-title style="padding-bottom: 0">Contacts</v-card-title>
+            <v-sheet min-height="20vh">
+              <v-card-title style="padding-bottom: 0"
+                >Recently Connected</v-card-title
+              >
               <v-divider></v-divider>
 
-              <v-list two-line>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="indigo"> mdi-phone </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>(63) 9302418587</v-list-item-title>
-                    <v-list-item-subtitle>Mobile</v-list-item-subtitle>
-                  </v-list-item-content>
-
-                  <v-list-item-icon>
-                    <v-icon>mdi-message-text</v-icon>
-                  </v-list-item-icon>
-                </v-list-item>
-
-                <v-list-item>
-                  <v-list-item-action></v-list-item-action>
-
-                  <v-list-item-content>
-                    <v-list-item-title>(63) 9302418587</v-list-item-title>
-                    <v-list-item-subtitle>Work</v-list-item-subtitle>
-                  </v-list-item-content>
-
-                  <v-list-item-icon>
-                    <v-icon>mdi-message-text</v-icon>
-                  </v-list-item-icon>
-                </v-list-item>
-
-                <v-divider inset></v-divider>
-
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="indigo"> mdi-email </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title
-                      >sebogueroaldwin@gmail.com</v-list-item-title
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="6"
+                  v-for="n in 6"
+                  :key="n"
+                  style="padding-bottom: 0"
+                >
+                  <v-list-item three-line>
+                    <v-list-item-avatar tile size="30" color="grey">
+                      <!-- <v-img src="img/aldwin.jpg"></v-img -->
+                      I</v-list-item-avatar
                     >
-                    <v-list-item-subtitle>Personal</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
+                    <v-list-item-content>
+                      <div class="text-xs-left subtitle-2">
+                        Aldwin Seboguero
+                      </div>
+                      <v-list-item-subtitle small
+                        >ICTMO Staff</v-list-item-subtitle
+                      >
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-col>
+              </v-row>
+            </v-sheet>
 
-                <v-list-item>
-                  <v-list-item-action></v-list-item-action>
-
+            <v-sheet min-height="20vh" style="margin-top: 20px">
+              <v-card-title style="padding-bottom: 0"
+                >Upcoming Event</v-card-title
+              >
+              <v-divider></v-divider>
+              <v-card class="mx-auto" v-for="n in 3" :key="n">
+                <v-list-item three-line>
+                  <v-list-item-avatar
+                    tile
+                    size="80"
+                    color="grey"
+                  ></v-list-item-avatar>
                   <v-list-item-content>
-                    <v-list-item-title
-                      >aldwin.seboguero@parsu.edu.ph</v-list-item-title
+                    <div class="overline mb-4">Conference</div>
+                    <v-list-item-title class="subtitle-2 mb-1"
+                      >Business Conference with dsk</v-list-item-title
                     >
-                    <v-list-item-subtitle>Work</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-divider inset></v-divider>
-
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="indigo"> mdi-map-marker </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>Zone 3 Matacla, Goa</v-list-item-title>
                     <v-list-item-subtitle
-                      >Camarines Sur, Philippines 4422</v-list-item-subtitle
+                      >Greyhound divisely hello coldly
+                      fonwderfully</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
-              </v-list>
+
+                <!-- <v-card-actions>
+                  <v-chip-group>
+                    <v-chip
+                      v-for="size in 4"
+                      :key="size"
+                      :value="size"
+                      color="transparent"
+                    >
+                      <v-avatar>
+                        <v-img src="img/aldwin.jpg"></v-img>
+                      </v-avatar>
+                    </v-chip>
+                  </v-chip-group>
+                </v-card-actions> -->
+              </v-card>
             </v-sheet>
           </v-col>
         </v-row>
